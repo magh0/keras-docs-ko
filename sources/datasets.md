@@ -66,7 +66,7 @@ from keras.datasets import imdb
 ```
 - __반환값:__
     - 2개의 튜플:
-        - __x_train, x_test__: 인덱스(정수)의 리스트인 시퀀스로 이루어진 리스트. 만약 num_words 인수를 특정지으면, 인덱스의 최대값은 num_words-1 입니다. 만약 maxlen 인수를 특정지으면, 시퀀스 길이의 최대값은 maxlen입니다.
+        - __x_train, x_test__: 인덱스(정수)의 리스트인 시퀀스로 이루어진 리스트. 만약 num_words 인수를 지정하면, 인덱스의 최대값은 num_words-1 입니다. 만약 maxlen 인수를 지정하면, 시퀀스 길이의 최대값은 maxlen입니다.
         - __y_train, y_test__: 정수 라벨(1 or 0)로 이루어진 리스트. 
 
 - __인수:__
