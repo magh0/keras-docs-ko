@@ -1,10 +1,10 @@
-# Keras 백엔드
+# 케라스 백엔드
 
 ## "백앤드"는 무엇인가요? 
 
-Keras는 딥러닝 모델을 개발하기 위한 고수준의 구성요성 요소를 제공하는 모델 레벨의 라이브러리입니다. Keras는 텐서 곱셈, 합성곱 등의 저수준의 연산을 제공하지 않습니다. 대신 Keras의 "백엔드 엔진" 역할을 하는 특수하고 잘 최적화 된 텐서 라이브러리에 의존합니다. 하나의 단일 텐서 라이브러리를 선택하고 Keras 구현을 해당 라이브러리에 묶는 대신, Keras는 모듈 방식으로 문제를 처리하여 여러 다른 백엔드 엔진들을 Keras에 매끄럽게 연결할 수 있게 합니다.
+케라스는 딥러닝 모델을 개발하기 위한 고수준의 구성요성 요소를 제공하는 모델 레벨의 라이브러리입니다. 케라스는 텐서 곱셈, 합성곱 등의 저수준의 연산을 제공하지 않습니다. 대신 케라스의 "백엔드 엔진" 역할을 하는 특수하고 잘 최적화 된 텐서 라이브러리에 의존합니다. 하나의 단일 텐서 라이브러리를 선택하고 케라스 구현을 해당 라이브러리에 묶는 대신, 케라스는 모듈 방식으로 문제를 처리하여 여러 다른 백엔드 엔진들을 케라스에 매끄럽게 연결할 수 있게 합니다.
 
-현재 Keras는 **TensorFlow**, **Theano**, 그리고 **CNTK**의 세 가지 백엔드를 지원합니다.
+현재 케라스는 **TensorFlow**, **Theano**, 그리고 **CNTK**의 세 가지 백엔드를 지원합니다.
 
 - [TensorFlow](http://www.tensorflow.org/) is an open-source symbolic tensor manipulation framework developed by Google.
 - [Theano](http://deeplearning.net/software/theano/) is an open-source symbolic tensor manipulation framework developed by LISA Lab at Université de Montréal.
@@ -16,7 +16,7 @@ Keras는 딥러닝 모델을 개발하기 위한 고수준의 구성요성 요�
 
 ## 한 백엔드에서 다른 백엔드로의 전환
 
-Keras를 한 번이라도 실행한 적이 있다면, 아래의 위치에서 Keras 구성 파일을 찾을 수 있습니다.
+케라스를 한 번이라도 실행한 적이 있다면, 아래의 위치에서 케라스 구성 파일을 찾을 수 있습니다.
 
 `$HOME/.keras/keras.json`
 
@@ -36,7 +36,7 @@ Keras를 한 번이라도 실행한 적이 있다면, 아래의 위치에서 Ker
 ```
 
 단순히 `backend` 필드의 값을 `"theano"`, `"tensorflow"` 또는 `"cntk"`로 바꿔주는 것 만으로
-새로운 백엔드를 사용해 Keras 코드를 실행할 수 있습니다. 
+새로운 백엔드를 사용해 케라스 코드를 실행할 수 있습니다. 
 
 또는 아래와 같이 환경 변수 `KERAS_BACKEND`를 정의해 설정 파일에 정의된 것을 대체할 수도 있습니다. 
 
@@ -45,7 +45,7 @@ KERAS_BACKEND=tensorflow python -c "from keras import backend"
 Using TensorFlow backend.
 ```
 
-Keras에서는 `"tensorflow"`, `"theano"` 그리고 `"cntk"`외에도 사용자가 지정한 임의의 백엔드를 로드하는 것이 가능합니다.
+케라스 `"tensorflow"`, `"theano"` 그리고 `"cntk"`외에도 사용자가 지정한 임의의 백엔드를 로드하는 것이 가능합니다.
 만약 `my_module`이라는 이름의 Python 모듈을 백엔드로 사용하고자 한다면,
 `keras.json` 파일의 `"backend"` 변수 값을 아래와 같이 바꿔주어야 합니다.  
 
@@ -89,10 +89,10 @@ Keras에서는 `"tensorflow"`, `"theano"` 그리고 `"cntk"`외에도 사용자�
 
 ----
 
-## 추상화된 Keras 백엔드를 사용하여 새로운 코드 작성하기
+## 추상화된 케라스 백엔드를 사용하여 새로운 코드 작성하기
 
-만약 Theano(`th`)와 Tensorflow(`tf`) 모두와 호환이 되는 Keras 모듈을 작성하고자 한다면,
-아래와 같이 추상화된 Keras 백엔드 API를 사용해야 합니다. 
+만약 Theano(`th`)와 Tensorflow(`tf`) 모두와 호환이 되는 케라스 모듈을 작성하고자 한다면,
+아래와 같이 추상화된 케라스 백엔드 API를 사용해야 합니다. 
 
 다음과 같이 백엔드 모듈을 사용할 수 있습니다.
 
@@ -256,7 +256,7 @@ keras.backend.cast_to_floatx(x)
 ```
 
 
-NumPy 배열을 Keras의 디폴트 float 타입으로 변환합니다.
+NumPy 배열을 케라스의 디폴트 float 타입으로 변환합니다.
 
 __Arguments__
 
@@ -412,7 +412,7 @@ keras.backend.learning_phase()
 
 
 해당 플래그 변수는 학습과 테스트시에 다른 행동을 취하는 
-Keras 함수에 입력으로 전달되는 bool형 텐서 (0 = 테스트, 1 = 학습)입니다.
+케라스 함수에 입력으로 전달되는 bool형 텐서 (0 = 테스트, 1 = 학습)입니다.
 
 __Returns__
 
@@ -523,7 +523,7 @@ __Arguments__
 
 __Returns__
 
-변수 인스턴스(Keras 메타 데이터 포함).
+변수 인스턴스(케라스 메타 데이터 포함).
 
 __Examples__
 
@@ -574,9 +574,9 @@ keras.backend.is_keras_tensor(x)
 ```
 
 
-`x`가 Keras 텐서인지 아닌지를 반환합니다.
+`x`가 케라스 텐서인지 아닌지를 반환합니다.
 
-"Keras 텐서"란 Keras 층(`Layer` 클래스) 또는 `Input`에 의해 반환된 텐서입니다.
+"케라스 텐서"란 케라스 층(`Layer` 클래스) 또는 `Input`에 의해 반환된 텐서입니다.
 
 __Arguments__
 
@@ -584,7 +584,7 @@ __Arguments__
 
 __Returns__
 
-A boolean: 주어진 인자가 Keras 텐서인지의 여부.
+A boolean: 주어진 인자가 케라스 텐서인지의 여부.
 
 __Raises__
 
