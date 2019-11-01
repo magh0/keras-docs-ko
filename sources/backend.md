@@ -292,11 +292,12 @@ keras.backend.image_data_format()
 ```
 
 
-Returns the default image data format convention.
+기본 이미지 데이터 형태의 규칙을 반환합니다.
 
 __Returns__
 
-A string, either `'channels_first'` or `'channels_last'`
+
+<sag>channels_first</sag> 또는 <sag>channels_last</sag>를 문자열 타입으로 반환합니다.
 
 __Example__
 
@@ -315,11 +316,11 @@ keras.backend.set_image_data_format(data_format)
 ```
 
 
-Sets the value of the data format convention.
+데이터 형식 규칙에 대한 값을 설정합니다. 
 
 __Arguments__
 
-- __data_format__: string. `'channels_first'` 또는 `'channels_last'`.
+- __data_format__: <sag>channels_first</sag> 또는 <sag>channels_last</sag>를 문자열 타입으로 반환합니다.
 
 __Example__
 
@@ -346,7 +347,7 @@ keras.backend.get_uid(prefix='')
 
 __Arguments__
 
-- __prefix__: An optional prefix of the graph.
+- __prefix__: 그래프의 선택적 접두사입니다.
 
 __Returns__
 
@@ -390,13 +391,13 @@ keras.backend.manual_variable_initialization(value)
 
 수동 변수 초기화 플래그를 설정합니다.
 
-이 boolean 플래그는 변수가 인스턴스화 될 때 초기화 되어야 하는지(기본값),
+이 <sag>boolean</sag> 플래그는 변수가 인스턴스화 될 때 초기화 되어야 하는지(기본값),
 혹은 사용자가 직접 초기화를 처리해야 하는지 여부를 결정합니다. 
 (e.g. via `tf.initialize_all_variables()`).
 
 __Arguments__
 
-- __value__: Python boolean.
+- __value__: <sag>boolean</sag>
     
 ----
 
